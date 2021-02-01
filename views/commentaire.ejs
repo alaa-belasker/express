@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/result" method="POST">
+        <input type="text" name="nom" placeholder="Entrez votre nom" required />
+        <input type="text" name="com" placeholder="Entrez votre commentaire" required />
+        <button type="submit" value="=" envoyer>Envoyer</button>
+    </form>
+    <ul>
+        <% table.forEach(function(element){ %>
+            <li>
+                <strong>
+                    le commentaire est :
+
+                </strong>
+                <%=element.com %>
+                    <strong>
+                        , de la part de :
+
+                    </strong>
+                    <%=element.nom %>
+                        <strong> , Fait le :
+
+                        </strong>
+                        <%=element.date %>
+            </li>
+            <% }); %>
+    </ul>
+
+</body>
+
+</html>
